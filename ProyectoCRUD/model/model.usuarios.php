@@ -22,9 +22,6 @@ class ModeloUsuario{
 			$stmt = null;
 
 		}
-
-		
-
 	}
 
     static public function mdlIngresarUsuarios($tabla, $datos){
@@ -41,7 +38,7 @@ class ModeloUsuario{
 		if($stmt->execute()){
 			return "ok";
 		}else{
-			return "error";
+			return "error modelo";
 		}
 
 		$stmt->close();

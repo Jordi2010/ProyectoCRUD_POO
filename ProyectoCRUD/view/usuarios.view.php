@@ -4,13 +4,10 @@ require("header.php");
 ?>
 <title>Document</title>
 </head>
-
 <body>
-
     <?php
     require("navbar.php");
     ?>
-
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-3 vh-100 bg-light">
         <?php
         require("../modales/usuario.modal.php")
@@ -39,7 +36,6 @@ require("header.php");
                     </table>
                 </div>
             </div>
-        
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Importa DataTables -->

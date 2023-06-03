@@ -28,7 +28,7 @@ class ControladorUsuario
 
             return $respuesta;
         } else {
-            $respuesta = "error";
+            $respuesta = "error controlador";
             return $respuesta;
         }
     }
