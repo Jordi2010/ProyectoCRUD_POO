@@ -12,9 +12,8 @@ class AjaxUsuarios{
     }
 
     public function ajaxMostrarUsuario(){
-        $item = null;
         $valor = null;
-        $respuesta = ControladorUsuario::ctrMostrarUsuario($item,$valor);   
+        $respuesta = ControladorUsuario::ctrMostrarUsuario($valor);   
         echo json_encode($respuesta);
     }
 

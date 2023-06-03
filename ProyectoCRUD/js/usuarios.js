@@ -6,26 +6,7 @@ $(document).ready(function () {
 
   
   
-  //traemos los campos que necesitemos mostrar en el formulario de editar
-  $(document).on('click', '.editar-usuario', function() {
-    $("#FormEditarusuario")[0].reset();
-    var idUsuario = $(this).data("id");
-    
-    $.ajax({
-      url: "../ajax/usuarios.ajax.php?metodo=obtener&id=" + idUsuario,
-      method: "GET",
-      dataType: "json",
-      success: function(respuesta) {
-        $("#editarnombre").val(respuesta.usuario);
-        $("#editarid_roles").val(respuesta.id_roles);
-        $("#editarid_status").val(respuesta.id_status);
-        $("#FormEditarusuario").attr("data-id", idUsuario);
-      },
-      error: function() {
-        mostrarError();
-      },
-    });
-  });
+
   
   //obtenemos el id del registro a eliminar y si el administrador desea eliminar dicho registro
   $(document).on('click', '.eliminar-usuario', function() {
@@ -94,6 +75,28 @@ $(document).ready(function () {
       },
     });  
   });
+
+
+    //traemos los campos que necesitemos mostrar en el formulario de editar
+    $(document).on('click', '.editar-usuario', function() {
+      $("#FormEditarusuario")[0].reset();
+      var idUsuario = $(this).data("id");
+      
+      $.ajax({
+        url: "../ajax/usuarios.ajax.php?metodo=obtener&id=" + idUsuario,
+        method: "GET",
+        dataType: "json",
+        success: function(respuesta) {
+          $("#editarnombre").val(respuesta.usuario);
+          $("#editarid_roles").val(respuesta.id_roles);
+          $("#editarid_status").val(respuesta.id_status);
+          $("#FormEditarusuario").attr("data-id", idUsuario);
+        },
+        error: function() {
+          mostrarError();
+        },
+      });
+    });
   
   $("#editar-usuario").click(function(event) {
     event.preventDefault();
@@ -136,7 +139,6 @@ $(document).ready(function () {
       url: "../ajax/usuarios.ajax.php?metodo=mostrar",
       type: "GET",
       dataType: "json",
-      data: {},
       success: function(respuesta) {
         var tbody = $('#tabla-usuarios').find('tbody');
         var contador = 1;

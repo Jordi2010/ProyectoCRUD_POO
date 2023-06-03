@@ -6,9 +6,7 @@ $stmt = $conexion->getConnection()->query("SELECT * FROM tbl_roles");
 $roles = $stmt->fetchAll(); 
 ?>
 
-<!-- pdo::fetchAssoc  -->
-<!-- pdo::fetchobj -->
-<!-- Modal -->
+
 <div class="modal fade" id="ModalNuevo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -73,9 +71,7 @@ $roles = $stmt->fetchAll();
 
                     
 
-<!-- pdo::fetchAssoc  -->
-<!-- pdo::fetchobj -->
-<!-- Modal -->
+
 <div class="modal fade" id="ModalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -87,6 +83,7 @@ $roles = $stmt->fetchAll();
 
         <form id="FormEditarusuario" method="post">
           <div class="row">
+            
             <div class="form-group col-6">
               <label for="nombre">Nombre de usuario:</label>
               <div class="input-group mb-3">
@@ -118,7 +115,7 @@ $roles = $stmt->fetchAll();
               </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group col-6">
               <label for="id_roles">Estado del usuario:</label>
               <div class="input-group mb-3">
               <select class="form-control" id="editarid_status" name="editarid_status">               
