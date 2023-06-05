@@ -12,17 +12,15 @@ class ControladorAsistencia
     static public function crtCrearAsistencia($data)
     {
         if (
-            preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $data[0]) &&
-            preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $data[1]) &&
-            preg_match('/^[0-9 ]+$/', $data[2]) &&
-            preg_match('/^[-+]?[0-9]+(\.[0-9]+)?$/', $data[3])
+            $data[0] != null &&
+            $data[1] != null &&
+            preg_match('/^[0-9 ]+$/', $data[2]) 
         ) {
             $tabla = "tbl_asistencias";
             $datos = array(
-                "nombre" => $data[0],
-                "descripcion" => $data[1],
-                "duracion" => $data[2],
-                "costo" => $data[3]
+                "checkin" => $data[0],
+                "checkout" => $data[1],
+                "id_miembro" => $data[2]
             );
             $respuesta = ModeloAsistencia::mdlIngresarAsistencias($tabla, $datos);
 

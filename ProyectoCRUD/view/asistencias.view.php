@@ -2,7 +2,7 @@
 session_start();
 require("header.php");
 ?>
-<title>Document</title>
+<title>Asistencias</title>
 </head>
 <body>
     <?php
@@ -17,6 +17,7 @@ require("header.php");
                     <i class="bi bi-plus-circle-fill"> Nuevo Miembro</i>
                 </button>
             </div>
+            
             <div class="container-fluid bg-light rounded">
                 <div class="container mt-3 p-2 ">
                     <table id="tabla-asistencias" class="table table-striped table-bordered table-hover table-hover">

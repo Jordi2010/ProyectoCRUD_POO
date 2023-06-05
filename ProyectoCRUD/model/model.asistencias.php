@@ -19,12 +19,11 @@ class ModeloAsistencia{
 		$conexion = new config();
         $conexion->conectar();
 
-		$stmt = $conexion->getConnection()->prepare("INSERT INTO $tabla(nombre, descripcion, duracion, costo) VALUES (:nombre, :descripcion, :duracion, :costo)");
+		$stmt = $conexion->getConnection()->prepare("INSERT INTO $tabla(checkin, checkout, id_miembro) VALUES (:checkin, :checkout, :id_miembro)");
 		
-        $stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
-        $stmt->bindParam(":descripcion", $datos["descripcion"], PDO::PARAM_STR);
-		$stmt->bindParam(":duracion", $datos["duracion"], PDO::PARAM_INT);
-		$stmt->bindParam(":costo", $datos["costo"], PDO::PARAM_INT);
+        $stmt->bindParam(":checkin", $datos["checkin"], PDO::PARAM_STR);
+        $stmt->bindParam(":checkout", $datos["checkout"], PDO::PARAM_STR);
+		$stmt->bindParam(":id_miembro", $datos["id_miembro"], PDO::PARAM_INT);
 
 		if($stmt->execute()){
 			return "ok";

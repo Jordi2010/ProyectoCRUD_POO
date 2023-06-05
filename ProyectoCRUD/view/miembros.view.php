@@ -2,7 +2,7 @@
 session_start();
 require("header.php");
 ?>
-<title>Document</title>
+<title>Miembros</title>
 </head>
 <body>
     <?php

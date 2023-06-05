@@ -15,7 +15,7 @@ $miembros = $stmt->fetchAll();
       </div>
       <div class="modal-body">
 
-        <form id="FormNuevasistencia" method="post">
+        <form id="FormNuevaasistencias" method="post">
           <div class="row">
 
           <div class="form-group col-6">
@@ -37,7 +37,7 @@ $miembros = $stmt->fetchAll();
             <div class="form-group col-6">
               <label for="nombre">Miembro:</label>
               <div class="input-group mb-3">
-              <select class="form-control" id="nuevoid_roles" name="nuevoid_roles">
+              <select class="form-control" id="nuevoid_miembro" name="nuevoid_miembro">
                   <option selected value="id_roles">Seleccionar Rol</option>
                   <?php
                   foreach ($miembros as $key) :
@@ -54,7 +54,7 @@ $miembros = $stmt->fetchAll();
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Cerrar</button>
-        <button type="submit" id="nuevo-membresia" class="btn btn-primary nuevo-usuario">Guardar Asistencia</button>
+        <button type="submit" id="nuevo-asistencia" class="btn btn-primary nuevo-usuario">Guardar Asistencia</button>
       </div>
     </div>
   </div>

@@ -22,7 +22,7 @@ $(document).ready(function () {
             showConfirmButton: false,
             timer: 1500
           })
-          $("#FormNuevaasistencia")[0].reset();
+          $("#FormNuevaasistencias")[0].reset();
           $(".close").click();
           cargarDatos();
         } else {

@@ -15,10 +15,9 @@ class AjaxAsistencias{
 
 
     public function ajaxNuevoAsistencia(){
-        $data = array($_POST["nuevonombre"],
-                      $_POST["nuevodescripcion"],
-                      $_POST["nuevoduracion"],
-                      $_POST["nuevocosto"]
+        $data = array($_POST["nuevocheckin"],
+                      $_POST["nuevocheckout"],
+                      $_POST["nuevoid_miembro"]
                     );
         $respuesta = ControladorAsistencia::crtCrearAsistencia($data);
         echo json_encode($respuesta);
