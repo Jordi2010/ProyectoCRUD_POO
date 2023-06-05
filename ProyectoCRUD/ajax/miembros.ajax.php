@@ -24,9 +24,10 @@ class AjaxMiembros{
 
     public function ajaxNuevoMiembro(){
         $data = array($_POST["nuevonombre"],
-                      $_POST["nuevopassword"],
-                      $_POST["nuevoid_roles"],
-                      $_POST["nuevoid_status"]
+                      $_POST["nuevodireccion"],
+                      $_POST["nuevotelefono"],
+                      $_POST["nuevocorreo"],
+                      $_POST["nuevofecha"]
                     );
         $respuesta = ControladorMiembro::crtCrearMiembro($data);
         echo json_encode($respuesta);
@@ -34,10 +35,11 @@ class AjaxMiembros{
 
     public function ajaxEditarMiembro(){
         $data = array($_POST["editarnombre"],
-        $_POST["editarpassword"],
-        $_POST["editarid_roles"],
-        $_POST["editarid_status"],
-        $_POST["id"]
+                      $_POST["editardireccion"],
+                      $_POST["editartelefono"],
+                      $_POST["editarcorreo"],
+                      $_POST["editarfecha"],
+                      $_POST["id"]
       );
        
         $respuesta = ControladorMiembro::ctrEditarMiembro($data);

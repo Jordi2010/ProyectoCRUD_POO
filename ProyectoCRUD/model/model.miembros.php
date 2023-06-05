@@ -8,7 +8,7 @@ class ModeloMiembro{
 		if($valor != null){
             
 			//$stmt = $conexion->getConnection()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
-			$stmt = $conexion->getConnection()->prepare("call obtenerMiembroEdit(:id)");
+			$stmt = $conexion->getConnection()->prepare("SELECT * FROM $tabla WHERE id = :id");
 			$stmt -> bindParam(":id", $valor, PDO::PARAM_STR);
 			$stmt -> execute();
 			return $stmt -> fetch();
@@ -28,12 +28,13 @@ class ModeloMiembro{
 		$conexion = new config();
         $conexion->conectar();
 
-		$stmt = $conexion->getConnection()->prepare("INSERT INTO $tabla(miembro, password, id_roles, status) VALUES (:miembro, :password, :id_roles, :status)");
+		$stmt = $conexion->getConnection()->prepare("INSERT INTO $tabla(nombre, direccion, telefono, correo, fecha_registro) VALUES (:nombre, :direccion, :telefono, :correo, :fecha_registro)");
 		
-        $stmt->bindParam(":miembro", $datos["miembro"], PDO::PARAM_STR);
-        $stmt->bindParam(":password", $datos["password"], PDO::PARAM_STR);
-		$stmt->bindParam(":id_roles", $datos["id_roles"], PDO::PARAM_INT);
-		$stmt->bindParam(":status", $datos["status"], PDO::PARAM_INT);
+        $stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
+        $stmt->bindParam(":direccion", $datos["direccion"], PDO::PARAM_STR);
+		$stmt->bindParam(":telefono", $datos["telefono"], PDO::PARAM_INT);
+		$stmt->bindParam(":correo", $datos["correo"], PDO::PARAM_STR);
+		$stmt->bindParam(":fecha_registro", $datos["fecha_registro"], PDO::PARAM_STR);
 
 		if($stmt->execute()){
 			return "ok";
@@ -50,12 +51,13 @@ class ModeloMiembro{
 		$conexion = new config();
         $conexion->conectar();
 
-		$stmt = $conexion->getConnection()->prepare("UPDATE $tabla SET miembro = :miembro, password = :password, id_roles = :id_roles, status = :status WHERE id = :id");
+		$stmt = $conexion->getConnection()->prepare("UPDATE $tabla SET nombre = :nombre, direccion = :direccion, telefono = :telefono, correo = :correo, fecha_registro = :fecha_registro WHERE id = :id");
 
-		$stmt->bindParam(":miembro", $datos["miembro"], PDO::PARAM_STR);
-        $stmt->bindParam(":password", $datos["password"], PDO::PARAM_STR);
-		$stmt->bindParam(":id_roles", $datos["id_roles"], PDO::PARAM_INT);
-		$stmt->bindParam(":status", $datos["status"], PDO::PARAM_INT);
+		$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
+        $stmt->bindParam(":direccion", $datos["direccion"], PDO::PARAM_STR);
+		$stmt->bindParam(":telefono", $datos["telefono"], PDO::PARAM_INT);
+		$stmt->bindParam(":correo", $datos["correo"], PDO::PARAM_STR);
+		$stmt->bindParam(":fecha_registro", $datos["fecha_registro"], PDO::PARAM_STR);
 
 		$stmt -> bindParam(":id", $datos["id"], PDO::PARAM_INT);
 

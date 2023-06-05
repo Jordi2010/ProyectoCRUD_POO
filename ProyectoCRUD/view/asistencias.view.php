@@ -25,8 +25,7 @@ require("header.php");
                                 <th scope="col">#</th>
                                 <th scope="col">checkin</th>
                                 <th scope="col">checkout</th>
-                                <th scope="col">Miembro</th>                                
-                                <th scope="col">Acciones</th>
+                                <th scope="col">Miembro</th>                            
                             </tr>
                         </thead>
                         <tbody>

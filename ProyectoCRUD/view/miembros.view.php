@@ -12,6 +12,7 @@ require("header.php");
         <?php
         require("../modales/miembro.modal.php")
         ?>
+        
             <div class="col-auto col-md-4 py-3">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalNuevo" id="nuevo">
                     <i class="bi bi-plus-circle-fill"> Nuevo Miembro</i>

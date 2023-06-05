@@ -15,7 +15,12 @@ class ModeloUsuario{
 			$stmt->close();
 			$stmt = null;
 		}else{
-            $stmt = $conexion->getConnection()->prepare("SELECT * FROM $tabla");
+            $stmt = $conexion->getConnection()->prepare("SELECT u.id, u.usuario, u.password, u.token, r.nombre AS nombre_rol, CASE u.status 
+			WHEN 1 THEN 'activo' 
+			WHEN 0 THEN 'inactivo' 
+		  END AS status
+		FROM $tabla AS u 
+		INNER JOIN tbl_roles AS r ON u.id_roles = r.id");
 			$stmt -> execute();
 			return $stmt -> fetchAll();
 			$stmt->close();

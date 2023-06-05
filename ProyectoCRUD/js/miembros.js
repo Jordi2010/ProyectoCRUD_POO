@@ -42,7 +42,7 @@ $(document).ready(function () {
 
   $("#nuevo-miembro").click(function(event) {
     event.preventDefault();
-    var datos = $("#FormNuevamiembros").serialize();
+    var datos = $("#FormNuevamiembro").serialize();
     datos += "&metodo=nuevo";
     $.ajax({
       url: "../ajax/miembros.ajax.php",

@@ -14,151 +14,133 @@ require("navbar.php");
 
  
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Dashboard</h1>
-        <div class="btn-toolbar mb-2 mb-md-0">
-          <div class="btn-group me-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-          </div>
-          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-            <span data-feather="calendar" class="align-text-bottom"></span>
-            This week
-          </button>
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 vh-100">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <div class="container-fluid shadow p-2 mb-2 mt-3 bg-body rounded">
+                    <p class="text-center fs-2 w-light">Estadisticas</p>
+                    <div class="row row-cols-1 row-cols-md-4 g-3">
+
+                        <div class="col-3">
+                            <div class="card text-white bg-primary">
+                                <div class="card-header">Miembros Registrados</div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <i class="bi bi-people-fill fs-1 col-2"></i>
+                                        <h5 class="card-title fs-1 col-5">+320</h5>
+                                    </div>
+                                    <p class="card-text fs-2">Totales</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <div class="col card text-white bg-secondary">
+                                <div class="card-header">Miembros Activos</div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <i class="bi bi-people-fill fs-1 col-2"></i>
+                                        <h5 class="card-title fs-1 col-5">+89</h5>
+                                    </div>
+                                    <p class="card-text fs-2">Del año anterior.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <div class="col card text-white bg-success">
+                                <div class="card-header">Recaudado</div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <i class="bi bi-people-fill fs-1 col-2"></i>
+                                        <h5 class="card-title fs-1 col-5">+10</h5>
+                                    </div>
+                                    <p class="card-text fs-2">Del mes anterior.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-3">
+                            <div class="col card text-white bg-success">
+                                <div class="card-header">Asistencias Registradas</div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <i class="bi bi-people-fill fs-1 col-2"></i>
+                                        <h5 class="card-title fs-1 col-5">+10</h5>
+                                    </div>
+                                    <p class="card-text fs-2">Del mes anterior.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
         </div>
-      </div>
 
-      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 
-      <h2>Section title</h2>
-      <div class="table-responsive">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1,001</td>
-              <td>random</td>
-              <td>data</td>
-              <td>placeholder</td>
-              <td>text</td>
-            </tr>
-            <tr>
-              <td>1,002</td>
-              <td>placeholder</td>
-              <td>irrelevant</td>
-              <td>visual</td>
-              <td>layout</td>
-            </tr>
-            <tr>
-              <td>1,003</td>
-              <td>data</td>
-              <td>rich</td>
-              <td>dashboard</td>
-              <td>tabular</td>
-            </tr>
-            <tr>
-              <td>1,003</td>
-              <td>information</td>
-              <td>placeholder</td>
-              <td>illustrative</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,004</td>
-              <td>text</td>
-              <td>random</td>
-              <td>layout</td>
-              <td>dashboard</td>
-            </tr>
-            <tr>
-              <td>1,005</td>
-              <td>dashboard</td>
-              <td>irrelevant</td>
-              <td>text</td>
-              <td>placeholder</td>
-            </tr>
-            <tr>
-              <td>1,006</td>
-              <td>dashboard</td>
-              <td>illustrative</td>
-              <td>rich</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,007</td>
-              <td>placeholder</td>
-              <td>tabular</td>
-              <td>information</td>
-              <td>irrelevant</td>
-            </tr>
-            <tr>
-              <td>1,008</td>
-              <td>random</td>
-              <td>data</td>
-              <td>placeholder</td>
-              <td>text</td>
-            </tr>
-            <tr>
-              <td>1,009</td>
-              <td>placeholder</td>
-              <td>irrelevant</td>
-              <td>visual</td>
-              <td>layout</td>
-            </tr>
-            <tr>
-              <td>1,010</td>
-              <td>data</td>
-              <td>rich</td>
-              <td>dashboard</td>
-              <td>tabular</td>
-            </tr>
-            <tr>
-              <td>1,011</td>
-              <td>information</td>
-              <td>placeholder</td>
-              <td>illustrative</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,012</td>
-              <td>text</td>
-              <td>placeholder</td>
-              <td>layout</td>
-              <td>dashboard</td>
-            </tr>
-            <tr>
-              <td>1,013</td>
-              <td>dashboard</td>
-              <td>irrelevant</td>
-              <td>text</td>
-              <td>visual</td>
-            </tr>
-            <tr>
-              <td>1,014</td>
-              <td>dashboard</td>
-              <td>illustrative</td>
-              <td>rich</td>
-              <td>data</td>
-            </tr>
-            <tr>
-              <td>1,015</td>
-              <td>random</td>
-              <td>tabular</td>
-              <td>information</td>
-              <td>text</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        <div class="col-md-12">
+            <div class="container-fluid shadow p-2 mb-2 mt-3 bg-body rounded">
+            <p class="text-center fs-2 w-light">Graficos</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Membresias Vendidas por mes</h5>
+                        </div>
+                        <div class="card-body">
+                        <canvas id="myChart1"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Membresias populares</h5>
+                        </div>
+                        <div class="card-body">
+                        <canvas id="myChart2"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+      
+            <div class="col-md-12">
+            <div class="container-fluid shadow p-2 mb-2 mt-3 bg-body rounded">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Tabla de datos</h5>
+                        </div>
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Columna 1</th>
+                                        <th>Columna 2</th>
+                                        <th>Columna 3</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Dato 1</td>
+                                        <td>Dato 2</td>
+                                        <td>Dato 3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dato 4</td>
+                                        <td>Dato 5</td>
+                                        <td>Dato 6</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     </main>
 
 

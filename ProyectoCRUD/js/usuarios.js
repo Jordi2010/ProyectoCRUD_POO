@@ -147,7 +147,7 @@ $(document).ready(function () {
           var tr = $("<tr>");
           tr.append("<td>" + contador + "</td>");
           tr.append("<td>" + usuario.usuario + "</td>");
-          tr.append("<td>" + usuario.id_roles + "</td>");
+          tr.append("<td>" + usuario.nombre_rol + "</td>");
           tr.append("<td>" + usuario.status + "</td>");
           tr.append("<td>"
             + '<div class="btn-group">'
