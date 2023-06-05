@@ -10,7 +10,7 @@ require("header.php");
     ?>
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-3 vh-100 bg-light">
         <?php
-        require("../modales/miembro.modal.php")
+        require("../modales/asistencias.modal.php")
         ?>
             <div class="col-auto col-md-4 py-3">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalNuevo" id="nuevo">
@@ -19,13 +19,13 @@ require("header.php");
             </div>
             <div class="container-fluid bg-light rounded">
                 <div class="container mt-3 p-2 ">
-                    <table id="tabla-miembros" class="table table-striped table-bordered table-hover table-hover">
+                    <table id="tabla-asistencias" class="table table-striped table-bordered table-hover table-hover">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Miembro</th>
-                                <th scope="col">Rol</th>
-                                <th scope="col">Status</th>
+                                <th scope="col">checkin</th>
+                                <th scope="col">checkout</th>
+                                <th scope="col">Miembro</th>                                
                                 <th scope="col">Acciones</th>
                             </tr>
                         </thead>
@@ -40,7 +40,7 @@ require("header.php");
     <!-- Importa DataTables -->
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 
-    <script src="../js/miembros.js"></script>
+    <script src="../js/asistencias.js"></script>
     <?php
     require_once("footer.php")
     ?>
