@@ -24,8 +24,10 @@ require("header.php");
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Miembro</th>
-                                <th scope="col">Rol</th>
-                                <th scope="col">Status</th>
+                                <th scope="col">Direccion</th>
+                                <th scope="col">Telefono</th>
+                                <th scope="col">Correo</th>                                
+                                <th scope="col">fecha de Registro</th>
                                 <th scope="col">Acciones</th>
                             </tr>
                         </thead>

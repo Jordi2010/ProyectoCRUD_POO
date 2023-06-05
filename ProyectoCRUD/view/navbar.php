@@ -45,22 +45,24 @@
                             Miembros
                         </a>
                     </li>
-                    <li class="nav-item text-light">
-                        <a class="nav-link" href="#">
-                            <span data-feather="users" class="align-text-bottom"></span>
-                            Customers
+
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="membresias.view.php">
+                            <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                            Membresias
                         </a>
                     </li>
+                  
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">
+                        <a class="nav-link text-light" href="asistencias.view.php">
                             <span data-feather="bar-chart-2" class="align-text-bottom"></span>
-                            Reports
+                            Asistencia
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">
+                        <a class="nav-link text-light" href="asignacion.view.php">
                             <span data-feather="layers" class="align-text-bottom"></span>
-                            Integrations
+                            Asignar Membresia
                         </a>
                     </li>
                 </ul>

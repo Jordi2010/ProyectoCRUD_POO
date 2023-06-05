@@ -17,46 +17,47 @@ $roles = $stmt->fetchAll();
 
         <form id="FormNuevamiembro" method="post">
           <div class="row">
+
             <div class="form-group col-6">
-              <label for="nombre">Nombre de miembro:</label>
+              <label for="nombre">Nombre:</label>
               <div class="input-group mb-3">
                 <input type="text" class="form-control" id="nuevonombre" name="nuevonombre" placeholder="Tomoya116">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-circle"></i></span>
               </div>
             </div>
+
             <div class="form-group col-6">
-              <label for="password">Contraseña:</label>
+              <label for="nombre">Direccion:</label>
               <div class="input-group mb-3">
-                <input type="password" class="form-control" placeholder="Contraseña" aria-describedby="button-addon2" name="nuevopassword" id="nuevopassword">
-                <button class="btn btn-outline-secondary" onclick="togglePassword()" type="button" id="button-addon2"><i class="bi bi-eye-slash"></i></button>
+                <input type="text" class="form-control" id="nuevodireccion" name="nuevodireccion" placeholder="Tomoya116">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-compass"></i></span>
               </div>
             </div>
 
             <div class="form-group col-6">
-              <label for="id_roles">Rol:</label>
+              <label for="nombre">Telefono:</label>
               <div class="input-group mb-3">
-                <select class="form-control" id="nuevoid_roles" name="nuevoid_roles">
-                  <option selected value="id_roles">Seleccionar Rol</option>
-                  <?php
-                  foreach ($roles as $key) :
-                  ?>
-                    <option value="<?php echo $key['id']; ?>"><?php echo $key['nombre']; ?></option>
-                  <?php endforeach; ?>
-                </select>
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-lines-fill"></i></span>
+                <input type="numeric" class="form-control" id="nuevotelefono" name="nuevotelefono" placeholder="77778888">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone"></i></span>
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="id_roles">Estado del miembro:</label>
+            <div class="form-group col-6">
+              <label for="nombre">Correo:</label>
               <div class="input-group mb-3">
-              <select class="form-control" id="nuevoid_status" name="nuevoid_status">               
-                <option value="1">Activo</option>
-                <option value="0">Inactivo</option>
-              </select>
-              <span class="input-group-text" id="basic-addon1"><i class="bi bi-toggles"></i></span>
+                <input type="text" class="form-control" id="nuevocorreo" name="nuevocorreo" placeholder="Tomoya116">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
               </div>
             </div>
+            
+            <div class="form-group col-6">
+              <label for="nombre">Fecha de Registro:</label>
+              <div class="input-group mb-3">
+              <input type="date" class="form-control" name="nuevofecha" id="nuevofecha" required>
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-calendar-date"></i></span>
+              </div>
+            </div>
+
           </div>
         </form>
       </div>
@@ -81,47 +82,49 @@ $roles = $stmt->fetchAll();
         <form id="FormEditarmiembro" method="post">
           <div class="row">
             
-            <div class="form-group col-6">
-              <label for="nombre">Nombre de miembro:</label>
+         <div class="form-group col-6">
+              <label for="nombre">Nombre:</label>
               <div class="input-group mb-3">
                 <input type="text" class="form-control" id="editarnombre" name="editarnombre" placeholder="Tomoya116">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-circle"></i></span>
               </div>
             </div>
-            <div class="form-group col-6">
-              <label for="password">Contraseña:</label>
 
+            <div class="form-group col-6">
+              <label for="nombre">Direccion:</label>
               <div class="input-group mb-3">
-                <input type="password" class="form-control" placeholder="Contraseña" aria-describedby="button-addon2" name="editarpassword" id="editarpassword">
-                <button class="btn btn-outline-secondary" onclick="togglePassword()" type="button" id="button-addon2"><i class="bi bi-eye-slash"></i></button>
+                <input type="text" class="form-control" id="editardireccion" name="editardireccion" placeholder="Tomoya116">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-compass"></i></span>
               </div>
             </div>
 
             <div class="form-group col-6">
-              <label for="id_roles">Rol:</label>
+              <label for="nombre">Telefono:</label>
               <div class="input-group mb-3">
-                <select class="form-control" id="editarid_roles" name="editarid_roles">
-                  <option selected value="id_roles">Seleccionar Rol</option>
-                  <?php
-                  foreach ($roles as $key) :
-                  ?>
-                    <option value="<?php echo $key['id']; ?>"><?php echo $key['nombre']; ?></option>
-                  <?php endforeach; ?>
-                </select>
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-lines-fill"></i></span>
+                <input type="numeric" class="form-control" id="editartelefono" name="editartelefono" placeholder="77778888">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-telephone"></i></span>
               </div>
             </div>
 
             <div class="form-group col-6">
-              <label for="id_roles">Estado del miembro:</label>
+              <label for="nombre">Correo:</label>
               <div class="input-group mb-3">
-              <select class="form-control" id="editarid_status" name="editarid_status">               
-                <option value="1">Activo</option>
-                <option value="0">Inactivo</option>
-              </select>
-              <span class="input-group-text" id="basic-addon1"><i class="bi bi-toggles"></i></span>
+                <input type="text" class="form-control" id="editarcorreo" name="editarcorreo" placeholder="Tomoya116">
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
               </div>
             </div>
+            
+            <div class="form-group col-6">
+              <label for="nombre">Fecha de Registro:</label>
+              <div class="input-group mb-3">
+              <input type="date" class="form-control" name="editarfecha" id="editarfecha" required>
+                <span class="input-group-text" id="basic-addon1"><i class="bi bi-calendar-date"></i></span>
+              </div>
+            </div>
+
+        
+
+     
           </div>
         </form>
       </div>
@@ -133,14 +136,3 @@ $roles = $stmt->fetchAll();
     </div>
   </div>
 </div>
-
-<script>
-  function togglePassword() {
-    var x = document.getElementById("password");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
-    }
-  }
-</script>

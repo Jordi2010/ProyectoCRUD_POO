@@ -8,7 +8,7 @@ class ModeloMiembro{
 		if($valor != null){
             
 			//$stmt = $conexion->getConnection()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
-			$stmt = $conexion->getConnection()->prepare("call obtenerMiembrosEdit(:id)");
+			$stmt = $conexion->getConnection()->prepare("call obtenerMiembroEdit(:id)");
 			$stmt -> bindParam(":id", $valor, PDO::PARAM_STR);
 			$stmt -> execute();
 			return $stmt -> fetch();

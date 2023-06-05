@@ -42,7 +42,7 @@ $(document).ready(function () {
 
   $("#nuevo-miembro").click(function(event) {
     event.preventDefault();
-    var datos = $("#FormNuevamiembro").serialize();
+    var datos = $("#FormNuevamiembros").serialize();
     datos += "&metodo=nuevo";
     $.ajax({
       url: "../ajax/miembros.ajax.php",
@@ -81,12 +81,15 @@ $(document).ready(function () {
         method: "GET",
         dataType: "json",
         success: function(respuesta) {
-          $("#editarnombre").val(respuesta.miembro);
-          $("#editarid_roles").val(respuesta.id_roles);
-          $("#editarid_status").val(respuesta.id_status);
+          $("#editarnombre").val(respuesta.nombre);
+          $("#editardireccion").val(respuesta.direccion);
+          $("#editartelefono").val(respuesta.telefono);
+          $("#editarcorreo").val(respuesta.correo);
+          $("#editarfecha").val(respuesta.fecha_registro);
+          $("#editarfecha_registro").val(respuesta.fecha_registro);
           $("#FormEditarmiembro").attr("data-id", idMiembro);
         },
-        error: function() {
+        error: function(respuesta) {
           mostrarError();
         },
       });
@@ -96,7 +99,7 @@ $(document).ready(function () {
     event.preventDefault();
     var idMiembro = $("#FormEditarmiembro").attr("data-id");
     var datos = $("#FormEditarmiembro").serialize();
-    datos += "&id=" +idMiembro + "&metodo=editar"
+    datos += "&id=" + idMiembro + "&metodo=editar"
     $.ajax({
       url: "../ajax/miembros.ajax.php",
       method: "POST",
@@ -112,7 +115,7 @@ $(document).ready(function () {
             showConfirmButton: false,
             timer: 1500
           })
-          $("#FormNuevamiembro")[0].reset();
+          $("#FormEditarmiembro")[0].reset();
           $(".close").click();
           cargarDatos();
         } else {
@@ -120,7 +123,7 @@ $(document).ready(function () {
         }
         
       },
-      error: function() {
+      error: function(respuesta) {
         mostrarError();
       },
     });
@@ -140,9 +143,11 @@ $(document).ready(function () {
         $.each(respuesta, function(index, miembro) {
           var tr = $("<tr>");
           tr.append("<td>" + contador + "</td>");
-          tr.append("<td>" + miembro.miembro + "</td>");
-          tr.append("<td>" + miembro.id_roles + "</td>");
-          tr.append("<td>" + miembro.status + "</td>");
+          tr.append("<td>" + miembro.nombre + "</td>");
+          tr.append("<td>" + miembro.direccion + "</td>");
+          tr.append("<td>" + miembro.telefono + "</td>");
+          tr.append("<td>" + miembro.correo + "</td>");
+          tr.append("<td>" + miembro.fecha_registro + "</td>");
           tr.append("<td>"
             + '<div class="btn-group">'
             + "<button data-bs-toggle='modal' data-bs-target='#ModalEdit' class='btn btn-warning editar-miembro' data-id='" + miembro.id + "'> "
