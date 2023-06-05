@@ -54,7 +54,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="asignacion.view.php">
+                        <a class="nav-link text-light" href="#">
                             <span data-feather="layers" class="align-text-bottom"></span>
                             Asignar Membresia
                         </a>
