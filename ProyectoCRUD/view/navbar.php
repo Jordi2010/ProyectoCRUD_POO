@@ -40,7 +40,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">
+                        <a class="nav-link text-light" href="miembros.view.php">
                             <span data-feather="shopping-cart" class="align-text-bottom"></span>
                             Miembros
                         </a>
